@@ -1,24 +1,18 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
-```{r}
+
+```r
 activity_data <- read.csv("activity.csv") 
 date <- as.Date(activity_data$date)
 activity_data$date <- date
-
 ```
 
 ## What is mean total number of steps taken per day?
-```{r}
+
+```r
 mean_total = sum(activity_data$steps, na.rm = TRUE) / (nrow(table(activity_data$date)))
-
-
 ```
 
 
